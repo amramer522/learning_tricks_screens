@@ -14,6 +14,9 @@ class MoviesData {
 
 class Movie {
 
+  double x = 1.0;
+
+
   late final bool adult;
   late final String backdropPath;
   late final List<int> genreIds;
