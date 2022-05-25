@@ -42,8 +42,8 @@ class _MoviesScreenState extends State<MoviesScreen> {
                       height: 200,
                       width: 200,
                     ),
-                    SizedBox(height: 10,),
-                    Text(controller.model!.movies[index].title,style: TextStyle(color: Colors.red),)
+                    const SizedBox(height: 10,),
+                    Text(controller.model!.movies[index].title,style: const TextStyle(color: Colors.red),)
                   ],
                 ),
               ),

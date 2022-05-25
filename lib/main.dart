@@ -6,6 +6,7 @@ import 'screens/confetti_animation/view.dart';
 import 'screens/flip_paper/view.dart';
 import 'screens/movie_db/view.dart';
 import 'screens/neon_button/view.dart';
+import 'screens/reverse/view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         ),
         home: PageView(
           children: [
+            ReverseScreen(),
             MoviesScreen(),
             AspectRatioScreen(),
             ConfettiScreen(),
