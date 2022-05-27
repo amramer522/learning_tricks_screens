@@ -6,23 +6,13 @@ import 'screens/confetti_animation/view.dart';
 import 'screens/flip_paper/view.dart';
 import 'screens/grid/view.dart';
 import 'screens/movie_db/view.dart';
+import 'screens/movies/view.dart';
 import 'screens/neon_button/view.dart';
 import 'screens/reverse/view.dart';
 
 void main() async{
-  getMyData().then((value) {
-    print(value);
-  });
-  print(printData());
+
   runApp(const MyApp());
-}
-
-String printData(){
-  return "hi";
-}
-
-Future<String> getMyData() async {
-  return Future.delayed(Duration(seconds: 5),() => "hello",);
 }
 
 class MyApp extends StatelessWidget {
@@ -36,17 +26,19 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: PageView(
-          children: [
-            GridScreen(),
-            ReverseScreen(),
-            MoviesScreen(),
-            AspectRatioScreen(),
-            ConfettiScreen(),
-            FlipPaperScreen(),
-            NeonButtonScreen(),
-          ],
-        ),
+        home: MoviesScreen(),
+        // home: PageView(
+        //   children: [
+        //     MoviesScreen(),
+        //     GridScreen(),
+        //     ReverseScreen(),
+        //     MoviesScreen(),
+        //     AspectRatioScreen(),
+        //     ConfettiScreen(),
+        //     FlipPaperScreen(),
+        //     NeonButtonScreen(),
+        //   ],
+        // ),
       ),
     );
   }
