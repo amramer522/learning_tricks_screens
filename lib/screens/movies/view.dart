@@ -13,7 +13,6 @@ class MoviesScreen extends StatefulWidget {
 
 class _MoviesScreenState extends State<MoviesScreen> {
   final controller = MoviesController();
-
   String initialValueText = "Action";
   int genre = 28;
 
@@ -72,8 +71,9 @@ class _MoviesScreenState extends State<MoviesScreen> {
                           height: 250,
                           margin: EdgeInsets.only(left: 10, right: 10, top: 10),
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(25),
-                              color: Colors.black),
+                            borderRadius: BorderRadius.circular(25),
+                            // color: Colors.black
+                          ),
                           child: Stack(
                             children: [
                               InteractiveViewer(
@@ -113,6 +113,17 @@ class _MoviesScreenState extends State<MoviesScreen> {
                                   ],
                                 ),
                               ),
+                              // Align(
+                              //   alignment: Alignment.topRight,
+                              //   child: Container(
+                              //     color: Colors.black,
+                              //       margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                              //       child: Text(
+                              //     "Popularity  ${model.results[index].popularity}",
+                              //     style: TextStyle(
+                              //         color: Colors.white, fontSize: 20),
+                              //   )),
+                              // ),
                               Align(
                                   alignment: Alignment.bottomCenter,
                                   child: Container(
@@ -129,7 +140,7 @@ class _MoviesScreenState extends State<MoviesScreen> {
                                         style: TextStyle(
                                             color: Colors.white, fontSize: 25),
                                         textAlign: TextAlign.center,
-                                      )))
+                                      ))),
                             ],
                           ),
                         ),
