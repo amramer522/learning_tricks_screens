@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "804003605915",
+    "project_id": "movies-4fc0d",
+    "storage_bucket": "movies-4fc0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804003605915:android:f5240da1890a303946053e",
+        "android_client_info": {
+          "package_name": "com.amoor.learning_screens"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804003605915-h0klif05orll5df1ilju2kplefqo2vua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw5ZR4uzt5QHsSDxTwGakL_Glcd7HeYk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804003605915-h0klif05orll5df1ilju2kplefqo2vua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../movie_details/view.dart';
@@ -47,6 +48,8 @@ class _MoviesScreenState extends State<MoviesScreen> {
                     });
               },
             ),
+            // Image.network CachedImageNetwork
+            // NetworkImage
             Expanded(
               child: FutureBuilder(
                 future: controller.getData(genre: genre),
@@ -78,11 +81,20 @@ class _MoviesScreenState extends State<MoviesScreen> {
                             children: [
                               InteractiveViewer(
                                 onInteractionEnd: (c) {},
-                                child: Image.network(
-                                  "https://image.tmdb.org/t/p/original" +
-                                      model.results[index].backdropPath,
+                                child: CachedNetworkImage(
+                                  imageUrl: "https://image.tmdb.org/t/p/original" + model.results[index].backdropPath,
                                   height: 250,
                                   fit: BoxFit.fill,
+                                  progressIndicatorBuilder: (context,url,progress){
+                                    if(progress.progress!=null)
+                                      {
+                                       double present = progress.progress!*100;
+                                        return Center(child: LinearProgressIndicator(value: progress.progress!,));
+                                      }else
+                                        {
+                                          return Center(child: Text("Image Loaded"));
+                                        }
+                                  },
                                 ),
                               ),
                               Container(
